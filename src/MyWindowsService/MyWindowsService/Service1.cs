@@ -35,7 +35,7 @@ namespace MyWindowsService
         {
             try
             {
-                File.AppendAllLines("c:\\MyWindowsService.log.txt", lines);
+                File.AppendAllLines("c:\\My1WindowsService.log.txt", lines);
             }
             catch (Exception ex)
             {
@@ -71,10 +71,10 @@ namespace MyWindowsService
                     ClusterHelper
                     .GetBucket("default")
                     .Upsert<dynamic>(
-                        "MyWindowsService.log.txt",
+                        "My1WindowsService.log.txt",
                         new
                         {
-                            id = "MyWindowsService.log.txt",
+                            id = "My1WindowsService.log.txt",
                             log = string.Join("\n", lines)
                         }
                     );
@@ -84,7 +84,7 @@ namespace MyWindowsService
                         "Couchbase result: ",
                         result.Success.ToString(),
                         "Document Key: ",
-                        "MyWindowsService.log.txt"
+                        "My1WindowsService.log.txt"
                 });
             }
             catch (Exception ex)
