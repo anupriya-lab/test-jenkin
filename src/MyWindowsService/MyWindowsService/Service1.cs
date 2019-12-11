@@ -74,7 +74,7 @@ namespace MyWindowsService
                         "My2WindowsService.log.txt",
                         new
                         {
-                            id = "My2WindowsService.log.txt",
+                            id = "My3WindowsService.log.txt",
                             log = string.Join("\n", lines)
                         }
                     );
